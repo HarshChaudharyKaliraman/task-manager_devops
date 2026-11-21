@@ -17,15 +17,6 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                echo 'Installing Python dependencies...'
-                sh '''
-                    python3 -m pip install -r requirements.txt
-                '''
-            }
-        }
-
         stage('Test Application') {
             steps {
                 echo 'Checking Python application syntax...'
